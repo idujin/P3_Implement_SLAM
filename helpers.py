@@ -53,7 +53,7 @@ def display_world(world_size, position, landmarks=None):
 # collected over a specified number of time steps, N
 #
 def make_data(N, num_landmarks, world_size, measurement_range, motion_noise, 
-              measurement_noise, distance):
+              measurement_noise, distance, debug = False):
 
 
     # check if data has been made
@@ -98,6 +98,8 @@ def make_data(N, num_landmarks, world_size, measurement_range, motion_noise,
     print(' ')
     print('Landmarks: ', r.landmarks)
     print(r)
+    if debug:
+        return data, r
 
 
     return data
